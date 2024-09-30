@@ -1,0 +1,55 @@
+<img src="assets/logohome1.png" style="padding-right: 20px;padding-left:30px;height:120px; width: 170px;">
+<img src="assets/winshoot.png" style="height:130px; width: 130px;margin-left: 1100px;">
+<br><br><br><br>
+<div class="container">
+  <div class="card">
+    <h1 style="text-align: center;color: black;">Votre Historiques</h1>
+    <h2 class="m-b-10 f-w-600">Nom :</h2>
+   <h1 class="text-muted f-w-400">{{u.firstName}} {{u.lastName}} </h1>
+    <table class="table"*ngIf="role==='ADMIN'">
+        <thead>
+          <tr>
+            <th scope="col">Nom du joueur</th>
+            <th scope="col">Difficulté</th>
+            
+            <th scope="col">Temps total</th>
+            <th scope="col">Score</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let h of histories">
+          <tr >
+            <td>{{h.username}}</td>
+            <td>{{h.levelName}}</td>
+            
+            <td>{{h.total}}</td>
+            <td>{{h.sore}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table" *ngIf="role==='USER'">
+        <thead>
+          <tr>
+            <th scope="col">Nom du joueur</th>
+            <th scope="col">Difficulté</th>
+            
+            <th scope="col">Temps total</th>
+            <th scope="col">Score</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let h of histories">
+          <tr *ngIf="h.username == undefined || h.username == u.firstName">
+            <td>{{h.username}}</td>
+            <td>{{h.levelName}}</td>
+            
+            <td>{{h.total}}</td>
+            <td>{{h.sore}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+
+<div>
+    <button class="btn btn-primary" [routerLink]="['/homequizz']"
+    style="background: #3a9efd; margin-top: 15px; border-color: #3a9efd;">Quitter</button>
+</div>
+</div>

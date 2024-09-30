@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="inscription.component.css">
+    </head>
+<body >
+    <div class="bg">
+        <div class="formulaire">
+            <div class="imageform">
+                <img src="logo.png">
+            </div>
+            <form id="login"class="f" (ngSubmit)="ajouterUser()">
+                <input type="text" class="zoneinput" placeholder="saisir votre prenom" name="fname" id="fname" required [(ngModel)]="users.firstName" required>
+                <input type="text" class="zoneinput" placeholder="saisir votre nom" name="lname"id="lname" required [(ngModel)]="users.lastName" required>
+                <input type="text" class="zoneinput" placeholder="saisir votre mail" name="email" id="email" required [(ngModel)]="users.email" required>
+                <input type="password" class="zoneinput" placeholder="Créer Un Mot De Passe" name="pwd" required [(ngModel)]="users.password" required>
+                
+                  
+                    <input type="number" name="age" placeholder="age" id="age" required [(ngModel)]="users.age" class="zoneinput" required>
+               
+           
+                    <input type="date" name="datestarter" placeholder="date" id="datestarter" required [(ngModel)]="users.starterDate" class="zoneinput" required>
+                
+                <br><br>
+               <button type="submit" class="submitboutton"  name="inscrire">S'inscrire</button><br>
+
+              Vous avez un compte?  <a routerLink="/authentification"> Se Connecter!</a>
+      
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
+

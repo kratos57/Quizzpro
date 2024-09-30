@@ -1,0 +1,81 @@
+<div class="container">
+    <div class="card bg-white">
+        <div class="card-body">
+            <img src="../../assets/winshoot.png" class="rounded float-end" style="width: 140px;"/>
+            <img src="assets/logohome1.png" style="padding-right: 20px;padding-left:30px;height: 120px; width: 170px;margin-right: 900px;">
+            <div class="page-content page-container" id="page-content">
+                <div class="padding">
+                    <div class="row container d-flex justify-content-center">
+                        <div class="col-xl-20 col-md-12">
+                            <div class="card user-card-full">
+                                <div class="row m-l-0 m-r-0">
+                                    <div class="col-sm-4 bg-c-lite-green user-profile">
+                                        <div class="card-block text-center text-white">
+                                            <div class="m-b-25">
+                                                <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius" alt="User-Profile-Image" style="width: 200px;height: 200px;">
+                                            </div>
+
+                                            <h1>consulte profil</h1>
+                                            <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16" type style="height: 100px;width:30px;">
+                                            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                <div class="col-sm-8">
+                                    <div class="card-block">
+                                    <h1 class="m-b-20 p-b-5 b-b-default f-w-600 " style="color: deepskyblue;">Profil Utilisateur</h1>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h2 class="m-b-10 f-w-600">Identification</h2>
+                                                <h4 class="text-muted f-w-400">{{u.id}}</h4>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <h2 class="m-b-10 f-w-600">Nom</h2>
+                                                <h4 class="text-muted f-w-400">{{u.firstName}}</h4>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <h2 class="m-b-10 f-w-600">Prénom</h2>
+                                                <h4 class="text-muted f-w-400">{{u.lastName}}</h4>
+                                            </div>
+                                         
+                                      
+                                            <div class="col-sm-4">
+                                                <h2 class="m-b-10 f-w-600">Age</h2>
+                                                <h4 class="text-muted f-w-400">{{u.age!}}</h4>
+                                            </div>
+                                        
+                                        <div class="col-sm-4">
+                                        <h2 class="m-b-10 f-w-600">Email</h2>
+                                        <h4 class="text-muted f-w-400">{{u.email}}</h4>
+                                     </div>
+                                            <div class="col-sm-4">
+                                                <h2 class="m-b-10 f-w-600">StarterDate</h2>
+                                                <h4 class="text-muted f-w-400">{{u.starterDate}}</h4>
+                                          
+                                </div>
+                                </div>
+                                <h1 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"style="color: deepskyblue;">Quiz</h1>
+                                    <div class="row">
+                                       
+                                        <div class="col-sm-12">
+                                            <a routerLink="/historique/:userUsername" *ngIf="role==='USER'">  <h2 class="m-b-10 f-w-600">Historique</h2></a>
+                                            <h3 class="text-muted f-w-400"></h3>
+                                            
+                                        </div>
+                                         
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+            <a routerLink="/homequizz"><button class="btn btn-outline-info" style="width:300px; height: 50px; "><h2>Quitter</h2></button></a>
+     
+                </div>
+        </div>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="homequizz.component.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="header">
+    <a routerLink="/home"> <img src="assets/logohome1.png" style="padding-right: 20px;padding-left:30px;height: 99px; width: 150px;"></a>
+   <h1>Rejoignez-nous</h1>
+  </div>
+  
+  <div class="topnav">
+        <a routerLink="/list" *ngIf="role==='ADMIN'">liste Des Utilisateurs</a>
+          <a routerLink="/questions" *ngIf="role==='ADMIN'">Gestion Des Quiz</a>
+          <a routerLink="/profil"><i class="glyphicon glyphicon-user" *ngIf="role==='USER'" style="color: white;"></i>Profil</a>
+          <a routerLink="/historique/:userUsername" *ngIf="role==='ADMIN'"><i class="glyphicon glyphicon-user" style="color: white;"></i>Historique</a>
+        <a routerLink="/authentification" style="float:right" (click)="logout()">Se Deconnecter </a>
+  </div>
+  
+  <div class="row">
+    <div class="leftcolumn">
+      <div class="card">
+        <div class="column">
+        <h2 style="color: orange;">Résoudre le Quiz Maintenant</h2>
+        <p> La plateforme polyvalente permettant aux commerciaux de répondre<br> au quiz pour tester leurs connaissances et améliorer <br>leurs compétences.</p>
+        <button class="button button4" routerLink="/theme">Commencer le quiz</button>
+      </div>
+      <div class="column">
+          <img src="assets/quizhome.png" style="height: 300px; width: 500px;margin-left: 540px;margin-top: -180px; ">
+        </div>
+      </div>
+      <div class="card">
+        <div class="column">
+        <h2 style="color: orange;">Qui nous sommes ?</h2>
+        <p>Nous sommes QuizPro.<br> Aider les commerciaux à s'échauffer sur différents sujets en jouant à nos quiz.<br>Jouez avec n'importe quel sujet
+<br>
+          Obtenez un score instantané
+          <br>
+          Interface joyeuse</p>
+          </div>
+          <div class="column">
+            <img src="assets/quizzzz.jpg" style="height: 300px; width: 500px;margin-left: 540px;margin-top: -180px; ">
+          </div>
+       
+      </div>
+      <div class="card">
+        <div class="column">
+        <h2 style="color: orange;">Pourquoi nous ?</h2>
+        <p>Chez QuizPro, nous aidons les commerciaux à mieux s'échauffer !<br> Raison pour laquelle à ce moment-là, <br>les commerciaux ne préféreront pas la perte de temps correspondant à leur état d’esprit du moment.<br> Ainsi, les commerciaux peuvent jouer à des quiz sur un sujet<br> qui apporte une bonne interaction avec le sujet <br>et aide à obtenir de meilleurs résultats sans stress ni tension.</p>
+          </div>
+          <div class="column">
+            <img src="assets/why.jpg" style="height: 300px; width: 400px;margin-left: 580px;margin-top: -180px; ">
+          </div>
+       
+      </div>
+
+    </div>
+    <div class="rightcolumn">
+      <div class="card">
+        <h2>Winshot</h2>
+        <img src="assets/winshoot.png" style="height: 200px; width:200px;margin-left: 40px; ">
+        <p>Un portail mobile et CRM qui aide les opérateurs télécoms et les retails à obtenir des données en temps réel et des analyses de la performance des points de vente.</p>
+      </div>
+      <div class="card">
+        <h3><b>Notre équipe</b></h3>
+       <div style="text-align:  center;">
+        <img src="assets/islem.jpg" style="height: 60px; width:60px; "><p>Islem Korbi</p>
+        <img src="assets/eya1.jpg"style="height: 60px; width:60px; "><p>Eya Trabelsi</p>
+        <img src="assets/naima.jpg" style="height: 60px; width:60px; "><p>Naima Hmaidi</p>
+        <img src="assets/ahmed.jpg"  style="height: 60px; width:60px; "><p>Abdelli Ahmed</p>
+        <img src="assets/yassine.jpg" style="height: 60px; width:60px; "><p>Yassine Sayari</p>
+        <img src="assets/ghaith.jpg"  style="height: 60px; width:60px; "><p>Ghaith Awechri</p>
+
+      </div>
+      </div>
+      <div class="card">
+        <h4><b>Pour Vous</b></h4>
+        <img src="assets/esprit.jpg" style="height: 200px; width:200px;margin-left: 40px; ">
+        <br>
+        <p>La connaissance est la clé qui ouvre toutes les portes du savoir. Préparez-vous à déverrouiller votre esprit et à explorer un monde de questions et de découvertes dans ce quiz passionnant.</p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="footer-dark">
+    <footer>
+        <div class="containerr">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 item">
+                    <h3>Winshot</h3>
+                    <ul>
+                        <li><a href="#">Communication</a></li>
+                        <li><a href="#">Operations</a></li>
+                        <li><a href="#">Insights</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 item text">
+                    <h3>QuizzPro</h3>
+                    <p>Tester vos connaissances et améliorer vos compétences !</p>
+                    
+                </div>
+                <div class="col item social">
+                  <a href="https://www.facebook.com/winshotapp"><img src="../assets/fb.png" alt="Facebook"/></a>
+                  <a href="#"><img src="../assets/linkedin.png" alt="Facebook"/></a>
+                  <a href="#"><img src="../assets/insta.png" alt="Facebook"/></a>
+                 
+                </div>
+            </div>
+  
+        </div>
+    </footer>
+  </div>
+  
+  </body>
+  </html>

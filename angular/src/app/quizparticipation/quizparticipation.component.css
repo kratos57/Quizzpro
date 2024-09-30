@@ -1,0 +1,59 @@
+nav{
+  background:#03b9fc;
+  height: 90px;
+  width: 100%;
+}
+
+
+
+nav ul{
+  float : right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin:0 10px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+nav ul li a{
+  color: #FFF8F3;
+  text-decoration: none;
+}
+
+
+
+.formulaire {
+  width: 380px;
+  min-height: 410px; /* Use min-height instead of height */
+  max-height: 80vh; /* Set a maximum height to prevent excessive growth */
+  overflow-y: auto; /* Add vertical scrolling if necessary */
+  box-shadow: 1px 1px 1px 1px rgb(44, 127, 155);
+  position: absolute;
+  top: 50px;
+  left: 35%;
+  margin: 6% auto;
+  background: #7c92bf;
+  padding: 5px;
+  border-radius: 10%;
+
+
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.submitboutton{
+  width: 85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin-top: auto;
+  background: linear-gradient(to right, #03b9fc, #dbdbdb);
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+}

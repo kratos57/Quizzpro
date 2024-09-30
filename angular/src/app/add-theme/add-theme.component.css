@@ -1,0 +1,17 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+
+#add .card {
+    padding: 20px;
+    padding: 20px;
+background: #fdfbfb;
+color: #fff;
+}
+#add h2 {
+text-align: center;
+margin-bottom: 20px;
+font-family: 'Aclonica';
+}
+#add input {
+    border-radius: 50px;
+}

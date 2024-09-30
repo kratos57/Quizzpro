@@ -1,0 +1,55 @@
+
+<div class="container">
+    <div class="card bg-white">
+        <div class="card-body">
+          <img src="/assets/winshoot.png" class="rounded float-end" style="width: 140px;"/>
+          <h2 class="card-title text-center text-secondary py-3" style="font-size: 50px;">{{title}}</h2>
+          <ul class="text-center list-inline py-3">
+          <li class="list-inline-item">
+              <a routerLink="/add" class="btn btn-outline-info" >Ajouter Utilisateur</a>
+          </li>
+          <li class="list-inline-item">
+              <a routerLink="/list" class="btn btn-outline-info" >Liste des utilisateurs</a>
+          </li>
+      </ul>
+          
+
+         
+      
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Identifiant</th>
+            <th>First Name</th>
+            
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Date Starter</th>
+            
+            <th>roll</th>
+            <th>Actions</th>   
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let u of users">
+            <tr  *ngIf="u.roll == undefined || u.roll == ''" >
+                <td>{{u.id}}</td>
+                <td>{{u.firstName}}</td> 
+                <td>{{u.lastName}}</td>
+                <td>{{u.email}}</td>
+                <td>{{u.age!}}</td>
+                <td>{{u.starterDate}}</td>
+               
+                <td>{{u.roll}}</td>
+                <td>
+                    <button (click)="removeUser(u.id)" class="btn btn-outline-danger"> Supprimer </button>  
+                    <button (click)="updateUser(u.id)" class="btn btn-outline-warning"> donner role</button>  
+                </td>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>
+        </div>
+</div>
+</div>

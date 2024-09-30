@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-lg-3">
+        <div id="sideBar">
+            <div class="card" style="width: 18rem; cursor: pointer; margin-left: 60px; " routerLink="/homequizz">
+                <img class="card-img-top img-thumbnail" src="assets/imageq.jpg" alt="Card image cap">
+              </div>
+              <h3 style="margin: 18px 0 -12px 15px;"><b>Quiz</b></h3>
+              <hr>
+
+              <div style="padding: 16px;">
+                  <div class="card" id="theme">
+
+                    <div class="list-group">
+                        <button type="button" class="list-group-item list-group-item-action active" style="cursor: default;">
+                        Les quiz
+                        </button>
+                        <button style="cursor: default" type="button" class="list-group-item d-flex justify-content-between list-group-item-action"
+                         *ngFor="let theme of themes">
+                          <a [routerLink]="['/questions/level/', theme.id]">{{theme.name}} </a>
+                          <div>
+                            
+                            <i class="fas fa-trash-alt" style="color:red; margin: 0 12px" (click)="deleteTheme(theme.id)"></i>
+                            <i class="fas fa-plus-square" (click)="addLevel(theme.id)"></i>
+                         </div></button>
+
+                        <button type="button" class="list-group-item list-group-item-action active"
+                        style="text-align: center;" (click)="openRegister()">Ajouter un quiz</button>
+                      </div>
+                    </div>
+              </div>
+
+              <button type="button" class="btn btn-outline-danger" style="margin-left: 20px;" (click)="returnToHomePage()">Quitter</button>
+
+
+        </div>
+    </div>
+    <div class="col-lg-9">
+      <router-outlet></router-outlet>
+    </div>
+</div>

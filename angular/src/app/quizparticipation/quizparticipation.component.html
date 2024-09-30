@@ -1,0 +1,44 @@
+<html>
+<head> <link rel="stylesheet" href="quizparticipation.component.css"></head>
+
+<body>
+  <nav>
+    <a routerLink="/home"> <img src="assets/logohome1.png" style="padding-right: 20px;padding-left:30px;height: 99px; width: 150px;"></a>
+<ul>
+  <li><a href="#"> <span class="material-symbols-outlined" >Mon Profile </span>  </a></li>
+
+
+     <li><a href="#"> <span class="material-symbols-outlined" >logout </span>  </a></li>
+</ul>
+</nav>
+
+<div class="formulaire">
+  <form clas="f" (ngSubmit)="validerquiz()">
+    <div *ngIf="quiz">
+      <h1>{{ quiz.title }}</h1>
+      <div *ngFor="let question of quiz.questions; let i = index">
+        <h3>{{ i + 1 }}. {{ question.questionText }}</h3>
+
+        <div *ngFor="let answer of question.answers; let j = index">
+          <label>
+            <input type="radio" name="question{{ i }}" [(ngModel)]="selectedValues[i]"[value]="answer">
+            {{ answer }}
+          </label>
+
+        </div>
+        <p>Correct Answer: {{ question.correctAnswer }}</p>
+      </div>
+    </div><br>
+    <button type="submit" class="submitboutton" name="valider">Valider</button>
+  </form>
+</div>
+
+<!--    <h3>{{ question.questionText }}</h3>
+    <ul>
+      <li *ngFor="let answer of question.answers">{{ answer }}</li>
+    </ul>
+    <p>Correct Answer: {{ question.correctAnswer }}</p>
+  -->
+</body>
+
+</html>

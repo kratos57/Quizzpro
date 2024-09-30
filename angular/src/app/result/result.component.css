@@ -1,0 +1,8 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+
+.card {
+    background: #fdfdfd;
+    padding: 15px;
+    text-align: center;
+}

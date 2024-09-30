@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="authentification.component.css">
+    </head>
+<body >
+   
+    <div class="bg">
+        <div class="formulaire">
+            <div class="imageform">
+                <img src="logo.png">
+            </div>
+            <form id="login" #authentifform="ngForm" class="f" (ngSubmit)="authentifier()">
+              
+                 <input type="text" class="zoneinput" placeholder="name" name="userUsername" id="name" [(ngModel)]="userUsername">
+                 
+                <input type="text" class="zoneinput" placeholder="Email" name="email" id="email" required [(ngModel)]="users.email">
+                <input type="password" class="zoneinput" placeholder="Mot De Passe" name="password" required [(ngModel)]="users.password"><br><br>
+               <button type="submit" class="submitboutton"  name="log" (click)="userLogin(userUsername)">Login</button><br>
+
+              Pas de compte?  <a routerLink="/inscription"> s'inscrire!</a><br>
+                 <a routerLink="/forgotpassword"> Mot de passe oublié? </a>
+
+
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
+
